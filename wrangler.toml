@@ -7,5 +7,13 @@ keep_vars = true
 binding = "KV"			#KV绑定名默认不可修改
 
 id = "34b5b00c544842ff8344f71711106bd1"				#KV数据库id
+[observability]
+[observability.logs]
+enabled = true
+invocation_logs = true        #Workers 日志
 
+[observability.traces]
+enabled = false              
 
+workers_dev = false          #禁用workers.devWorker 的路由
+preview_urls = false         #禁用Worker 的预览 URL
