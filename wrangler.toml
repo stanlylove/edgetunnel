@@ -2,7 +2,8 @@ name = "cfcf"
 main = "_worker.js"
 compatibility_date = "2025-11-04"
 keep_vars = true
-
+workers_dev = false          # 1. 禁用 workers.dev Worker 的路由（不再自动部署到 *.workers.dev 子域名）
+preview_urls = false         # 2. 禁用 Worker 的预览 URL（不再生成 previewurl.workers.dev 等预览链接）
 [[kv_namespaces]]
 binding = "KV"			#KV绑定名默认不可修改
 
@@ -15,5 +16,3 @@ invocation_logs = true        #Workers 日志
 [observability.traces]
 enabled = false              
 
-workers_dev = false          #禁用workers.devWorker 的路由
-preview_urls = false         #禁用Worker 的预览 URL
